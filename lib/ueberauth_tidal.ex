@@ -1,0 +1,2 @@
+defmodule UeberauthTidal do
+end
