@@ -17,7 +17,8 @@ defmodule Ueberauth.Strategy.Tidal.OAuth do
     strategy: __MODULE__,
     site: "https://openapi.tidal.com/v2",
     authorize_url: "https://login.tidal.com/authorize",
-    token_url: "https://auth.tidal.com/v1/oauth2/token"
+    token_url: "https://auth.tidal.com/v1/oauth2/token",
+    token_method: :post
   ]
 
   @doc """

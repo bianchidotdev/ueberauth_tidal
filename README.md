@@ -81,14 +81,17 @@ Or with options:
 
     /auth/tidal?scope=...&show_dialog=true
 
-By default the requested scope is "user-read-email". Scope can be configured either explicitly as a `scope` query value on the request path or in your configuration:
+By default the requested scope is "user.read". Scope can be configured either explicitly as a `scope` query value on the request path or in your configuration:
 
 ```elixir
 config :ueberauth, Ueberauth,
   providers: [
-    tidal: {Ueberauth.Strategy.Tidal, [default_scope: "user-read-email,user-read-private"]}
+    tidal: {Ueberauth.Strategy.Tidal, [default_scope: "user.read playlist.read"]}
   ]
 ```
+
+## TODO
+* Make Jason not required
 
 ## License
 

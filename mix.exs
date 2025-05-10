@@ -26,6 +26,7 @@ defmodule UeberauthTidal.Mixfile do
     [
       {:ueberauth, "~> 0.7"},
       {:oauth2, "~> 1.0 or ~> 2.0"},
+      {:jason, "~> 1.0"},
       {:ex_doc, ">= 0.0.0", only: :dev}
     ]
   end
