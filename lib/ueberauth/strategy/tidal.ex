@@ -4,7 +4,7 @@ defmodule Ueberauth.Strategy.Tidal do
   """
 
   use Ueberauth.Strategy,
-    uid_field: :uid,
+    uid_field: :id,
     default_scope: "user.read"
 
   alias Ueberauth.Auth.Info
@@ -186,6 +186,10 @@ defmodule Ueberauth.Strategy.Tidal do
       {:error, %OAuth2.Error{reason: reason}} ->
         set_errors!(conn, [error("OAuth2", reason)])
     end
+  end
+
+  def uid(conn) do
+    conn.private.tidal_user["id"]
   end
 
   @doc """
